@@ -8,8 +8,9 @@ export default function Page() {
     <>
       {componentArr.map((component) => {
         return (
-          <div className="flex w-full h-screen justify-center items-center">
+          <div className="flex flex-col relative w-full h-screen justify-center items-center">
             {component}
+            <hr className="w-full h-[2px] absolute bottom-0 dark:bg-white bg-black mx-auto sm:w-1/2" />
           </div>
         );
       })}
