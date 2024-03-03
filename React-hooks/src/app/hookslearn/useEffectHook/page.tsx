@@ -1,9 +1,14 @@
 import { ReactElement } from "react";
 import BasicUseEffect from "./basicsUseEffect";
 import TicTacToe from "./tictactoe";
+import RefinedTicTacToe from "./refinedTicTacToe";
 
 export default function Page() {
-  const componentArr: ReactElement[] = [<BasicUseEffect />, <TicTacToe />];
+  const componentArr: ReactElement[] = [
+    <BasicUseEffect />,
+    <TicTacToe />,
+    <RefinedTicTacToe />,
+  ];
   return (
     <>
       {componentArr.map((component) => {
