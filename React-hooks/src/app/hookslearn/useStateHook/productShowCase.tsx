@@ -57,6 +57,11 @@ function ProductTable(props: Product[]): ReactElement {
   );
 }
 
-// function ProductCategory({category}:) {
-//   return <tr></tr>;
-// }
+function ProductCategory({ category }: Pick<Product, "category">) {
+  return <tr></tr>;
+}
+
+type ProductProps = {
+  product: Product;
+};
+function ProductRow({ product }: ProductProps) {}
