@@ -4,23 +4,60 @@ import {
   BoardProps,
   Squares,
 } from "@/app/lib/hookslearn/useEffect/refinedTicTac";
+import { link } from "fs";
 import { useState } from "react";
 
 const RefinedTicTacToe = () => {
   const [history, setHistory] = useState<(string | null)[][]>([
     Array(9).fill(null),
   ]);
+  const [currentMove, setCurrentMove] = useState<number>(0);
   const [isXNext, setXNext] = useState<boolean>(true);
 
-  const currentSquare = history[history.length - 1];
+  let currentSquare = history[history.length - 1];
 
   function onPlay(squares: Squares) {
     setHistory([...history, squares]);
     setXNext(!isXNext);
   }
+  function jumpTo(move: number) {
+    setHistory([...history.slice(0, move == 0 ? 1 : move + 1)]);
+    setCurrentMove(move);
+  }
+  const winner = calculateWinner(currentSquare);
+  let status;
+  if (winner) {
+    status = "Winner is :" + winner;
+  } else {
+    status = "Next move : " + (isXNext ? "X" : "O");
+  }
+  const moves = history.map((squares, move) => {
+    let description;
+    if (move > 0) {
+      description = "Go to move #" + move;
+    } else {
+      description = "Go to game start";
+    }
+    return (
+      <li key={move}>
+        <button
+          className=" dark:bg-white bg-black mt-2 rounded-sm dark:text-black text-white p-[2px] "
+          onClick={() => jumpTo(move)}
+        >
+          {description}
+        </button>
+      </li>
+    );
+  });
   return (
-    <div>
-      <Board squares={currentSquare} isXNext={isXNext} onPlay={onPlay} />
+    <div className="h-[200px] w-[400px] flex justify-evenly items-center ">
+      <div className="col-start-1 col-end-2 ">
+        <h2>{status}</h2>
+        <Board squares={currentSquare} isXNext={isXNext} onPlay={onPlay} />
+      </div>
+      <div className=" overflow-hidden h-full w-auto overflow-y-scroll bg-slate-700 p-6 rounded-xl shadow-inner shadow-white">
+        <ul className="">{moves}</ul>
+      </div>
     </div>
   );
 };
