@@ -1,7 +1,9 @@
 "use client";
 import { Product } from "@/app/lib/hookslearn/useState/productShow";
-import { ReactElement } from "react";
-
+import { table } from "console";
+import { ReactElement, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
+import clsx from "clsx";
 const PRODUCTS: Product[] = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
@@ -10,58 +12,121 @@ const PRODUCTS: Product[] = [
   { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
   { category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
 ];
-// Based on above data we have to design our mockup product table
+
 export default function ProductPage() {
-  const handleChange = () => {};
+  const [filteredText, setFilteredText] = useState<string>("");
+  const [inStocked, setInStocked] = useState<boolean>(false);
   return (
-    <div className="h-[80%] p-2 text-white w-[80%]  bg-indigo-700 rounded-lg flex flex-col items-center">
-      <FilteringComponent handleChange={handleChange} />
+    <div className="w-4/5 h-4/5 p-2 bg-indigo-600 rounded-md flex flex-col items-center  gap-12">
+      <FilterBlock
+        filteredText={filteredText}
+        setFilteredText={setFilteredText}
+        inStocked={inStocked}
+        setInStocked={setInStocked}
+      />
+      <TableBLock inStocked={inStocked} filteredText={filteredText} />
     </div>
   );
 }
-
-function FilteringComponent({ handleChange }: { handleChange: () => void }) {
+interface FilterBlockProps {
+  filteredText: string;
+  setFilteredText: Dispatch<SetStateAction<string>>;
+  inStocked: boolean;
+  setInStocked: Dispatch<SetStateAction<boolean>>;
+}
+function FilterBlock({
+  filteredText,
+  setFilteredText,
+  inStocked,
+  setInStocked,
+}: FilterBlockProps) {
   return (
-    <div className="w-full flex flex-col gap-4 p-2 items-center">
+    <div className="w-full p-3 flex flex-col gap-2 items-center">
       <input
-        className="p-1 w-full text-2xl text-black bg-white rounded-lg"
+        className="w-full bg-white p-2 text-2xl rounded-md text-black"
+        placeholder="search..."
         type="text"
-        placeholder="search.."
+        name="product"
+        id="product"
+        value={filteredText}
+        onChange={(e) => setFilteredText(e.target.value)}
       />
-      <div className="flex items-center gap-2">
+      <div className="text-xl font-bold flex justify-center gap-2 items-center">
         <input
-          className="w-6 h-6 bg-white "
+          className="w-6 h-6"
           type="checkbox"
-          onChange={handleChange}
-          id="stock"
+          name="stocked"
+          id=""
+          checked={inStocked}
+          onChange={() => setInStocked(!inStocked)}
         />
-        <label htmlFor="stock" className="font-medium text-lg">
-          Only show products in stock
-        </label>
+        <label htmlFor="stocked">Filtered out the stocked products</label>
       </div>
     </div>
   );
 }
 
-function ProductTable(props: Product[]): ReactElement {
+interface TableBLockProps {
+  inStocked: boolean;
+  filteredText: string;
+}
+
+function TableBLock({ inStocked, filteredText }: TableBLockProps) {
+  let lastCategory: string | null = null;
+  let rows: ReactElement[] = [];
+  PRODUCTS.forEach((product, idx) => {
+    if (!product.name.toLowerCase().includes(filteredText)) {
+      return;
+    }
+    if (inStocked && !product.stocked) {
+      return;
+    }
+    if (product.category != lastCategory) {
+      rows.push(
+        <TableHeads key={product.category} category={product.category} />
+      );
+    }
+    rows.push(
+      <TableRows
+        key={product.name}
+        name={product.name}
+        price={product.price}
+        stocked={product.stocked}
+      />
+    );
+    lastCategory = product.category;
+  });
   return (
-    <table>
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Price</td>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div className="w-4/5 h-1/2  bg-white text-black p-4 rounded-lg">
+      <table className="w-full mx-auto">
+        <thead>
+          <tr className="w-full mx-auto flex ml-4 border-b-2 justify-between">
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
   );
 }
 
-function ProductCategory({ category }: Pick<Product, "category">) {
-  return <tr></tr>;
+type TableHeadsProps = Pick<Product, "category">;
+
+function TableHeads({ category }: TableHeadsProps) {
+  return (
+    <tr>
+      <th>{category}</th>
+    </tr>
+  );
 }
 
-type ProductProps = {
-  product: Product;
-};
-function ProductRow({ product }: ProductProps) {}
+type TableRowsProps = Pick<Product, "name" | "price" | "stocked">;
+function TableRows({ price, name, stocked }: TableRowsProps) {
+  return (
+    <tr className={clsx("w-full border-b", { "text-red-500": !stocked })}>
+      <td>{name}</td>
+      <td>{price}</td>
+    </tr>
+  );
+}
