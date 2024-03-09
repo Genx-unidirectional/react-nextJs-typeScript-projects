@@ -97,7 +97,7 @@ function TableBLock({ inStocked, filteredText }: TableBLockProps) {
     lastCategory = product.category;
   });
   return (
-    <div className="w-4/5 h-1/2  bg-white text-black p-4 rounded-lg">
+    <div className="w-4/5 h-1/2 overflow-hidden overflow-y-scroll  bg-white text-black p-4 rounded-lg">
       <table className="w-full mx-auto">
         <thead>
           <tr className="w-full mx-auto flex ml-4 border-b-2 justify-between">
