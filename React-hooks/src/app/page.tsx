@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="p-3 flex justify-between items-center bg-violet-700 ">
+      <div className="">
         <section className="">
-          <h1 className={`${lustria.className} text-3xl `}>Next</h1>
+          <h1 className={`${lustria.className} text-3xl `}></h1>
         </section>
       </div>
     </>
