@@ -2,6 +2,7 @@ import MoreOnUseState from "./usingdevtools";
 import BasicUseState from "./basicUseState";
 import ProductPage from "./productShowCase";
 import UserInfoChange from "./netstedObj";
+import QuizApp from "./stateManage";
 
 export default function Page() {
   const componentArr = [
@@ -9,6 +10,7 @@ export default function Page() {
     <MoreOnUseState />,
     <ProductPage />,
     <UserInfoChange />,
+    <QuizApp />,
   ];
   return (
     <>
