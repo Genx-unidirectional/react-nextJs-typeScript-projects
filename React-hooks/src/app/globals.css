@@ -74,3 +74,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities{
+  .nav-width{
+    width: calc(100% - 4rem);
+    
+  }
+  .nav-width::-webkit-scrollbar {
+    width: none; /* Adjust the width of the scrollbar */
+    height: none; /* Adjust the height of the scrollbar */
+  }
+  
+  .nav-width::-webkit-scrollbar-thumb {
+    background-color: none; /* Change the color of the scrollbar thumb */
+    border-radius: none; /* Adjust the border radius of the scrollbar thumb */
+  }
+  .nav-width{
+    scrollbar-width: none; /* Set the width of the scrollbar */
+  }
+  
+  .nav-width::-moz-scrollbar-thumb {
+    background-color: none; /* Change the color of the scrollbar thumb */
+    border-radius: none; /* Adjust the border radius of the scrollbar thumb */
+  }
+}
