@@ -37,7 +37,7 @@ const QuizApp = () => {
       ansCheck(answer as string);
     }
   };
-  // const getUser =
+
   return (
     <div className="bg-white text-black w-[450px] h-[300px] rounded-lg flex flex-col p-4 relative">
       {!success ? (

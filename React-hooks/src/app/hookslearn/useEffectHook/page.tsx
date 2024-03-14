@@ -1,3 +1,4 @@
+"use client";
 import { ReactElement } from "react";
 import BasicUseEffect from "./basicsUseEffect";
 import TicTacToe from "./tictactoe";

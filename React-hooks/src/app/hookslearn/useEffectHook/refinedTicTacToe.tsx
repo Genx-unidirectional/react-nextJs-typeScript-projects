@@ -20,6 +20,7 @@ const RefinedTicTacToe = () => {
     setHistory([...history, squares]);
     setXNext(!isXNext);
   }
+
   function jumpTo(move: number) {
     setHistory([...history.slice(0, move == 0 ? 1 : move + 1)]);
     setCurrentMove(move);
