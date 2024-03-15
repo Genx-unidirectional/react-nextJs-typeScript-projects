@@ -1,10 +1,10 @@
 "use client";
-import TestTwo from "./testTwo";
-import TestThree from "./testThree";
+import ImageLoad from "./imageLoad";
 import ChatApp from "./chatApp";
+import ContactManager from "./contactWithEdit";
 
 const Page = () => {
-  const componentArr = [<ChatApp />];
+  const componentArr = [<ChatApp />, <ContactManager />, <ImageLoad />];
   return (
     <div className="min-h-screen">
       {componentArr.map((component, idx) => {
