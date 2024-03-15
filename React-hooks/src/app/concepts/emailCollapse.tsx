@@ -27,7 +27,8 @@ const EmailCollapse = () => {
         {detailContact.map((contact, idx) => {
           return (
             <li
-              key={idx}
+              key={contact.id} // here key changes even though order changes
+              //   key={idx} here we are passing the key which stays same even order changes
               className="flex justify-center items-center flex-col gap-2"
             >
               <ExpandEmail contact={contact} />
