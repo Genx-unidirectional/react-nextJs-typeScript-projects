@@ -7,7 +7,7 @@ export type Contact = {
   email: string;
 };
 export default function ContactManager() {
-  const [contacts, setContacts] = useState(initialContacts);
+  const [contacts, setContacts] = useState<Contact[]>(initialContacts);
   const [selectedId, setSelectedId] = useState(0);
   const selectedContact = contacts.find((c) => c.id === selectedId);
 

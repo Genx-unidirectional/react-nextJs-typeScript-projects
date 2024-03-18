@@ -7,6 +7,7 @@ export default function SideNav() {
   const linkArr = [
     { name: "useStateHook", url: "/hookslearn/useStateHook" },
     { name: "useEffectHook", url: "/hookslearn/useEffectHook" },
+    { name: "useReducerHook", url: "/hookslearn/useReducerHook" },
   ];
   const pathname = usePathname();
   return (
