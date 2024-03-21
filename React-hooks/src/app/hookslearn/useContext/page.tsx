@@ -1,16 +1,23 @@
 "use client";
 import { ReactElement } from "react";
 import BasicContext from "./basicContext";
+import ReducerPlusContext from "./reducerPlusContext";
 
 export default function Page() {
-  const ComponentArr: ReactElement[] = [<BasicContext />];
+  const ComponentArr: ReactElement[] = [
+    <BasicContext />,
+    <ReducerPlusContext />,
+  ];
   return (
-    <div className="min-h-screen relative w-full flex flex-col items-center">
+    <div className="min-h-screen  w-full  flex flex-col items-center">
       {ComponentArr.map((component, idx) => {
         return (
-          <div className="h-screen flex justify-center items-center ">
+          <div
+            key={idx}
+            className="h-screen relative flex justify-center items-center "
+          >
             {component}
-            <hr className="w-full sm:w-1/2 absolute bottom-0 mx-auto" />
+            <hr className="w-3/4 bg-white border border-solid border-b-2 border-white  absolute bottom-0 mx-auto" />
           </div>
         );
       })}
