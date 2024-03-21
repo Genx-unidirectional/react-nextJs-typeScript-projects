@@ -1,5 +1,5 @@
 import { Redressed } from "next/font/google";
-import { FormEvent, useReducer, useState } from "react";
+import { Dispatch, FormEvent, useReducer, useState } from "react";
 import TodoComponent from "@/app/ui/useReducerUi/todoComponent";
 type Todo = {
   id: number;
@@ -85,7 +85,10 @@ const reducer = (state: InitStateType, action: Action_Type): InitStateType => {
 };
 
 const BasicReducer = () => {
-  const [state, dispatch] = useReducer(reducer, initState);
+  const [state, dispatch]: [InitStateType, Dispatch<Action_Type>] = useReducer(
+    reducer,
+    initState
+  );
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = document.getElementById("todo") as HTMLInputElement;

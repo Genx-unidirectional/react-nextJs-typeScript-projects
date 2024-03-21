@@ -8,17 +8,15 @@ export default function SideNav() {
     { name: "useStateHook", url: "/hookslearn/useStateHook" },
     { name: "useEffectHook", url: "/hookslearn/useEffectHook" },
     { name: "useReducerHook", url: "/hookslearn/useReducerHook" },
+    { name: "useContext", url: "/hookslearn/useContext" },
   ];
   const pathname = usePathname();
   return (
     <>
-      <nav className="flex w-full overflow-y-scroll p-2 gap-2  font-serif">
+      <nav className="flex w-full overflow-y-scroll  p-2 gap-4  font-serif">
         {linkArr.map((link) => {
           return (
-            <li
-              key={link.name}
-              className="relative w-[25%] list-none before:content-[''] before:w-0 before:absolute "
-            >
+            <li key={link.name} className="relative w-[25%] list-none  ">
               <Link
                 className={clsx("", {
                   "font-bold text-teal-300 transition-all duration-500":
