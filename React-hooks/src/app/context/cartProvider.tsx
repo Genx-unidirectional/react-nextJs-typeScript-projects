@@ -109,7 +109,7 @@ const initCartContextState: CartContextState = {
   Reducer_Actions: REDUCER_ACTION_TYPE,
 };
 
-const CartContext = createContext<CartContextState>(initCartContextState);
+export const CartContext = createContext<CartContextState>(initCartContextState);
 
 export const CartProvider = ({
   children,
