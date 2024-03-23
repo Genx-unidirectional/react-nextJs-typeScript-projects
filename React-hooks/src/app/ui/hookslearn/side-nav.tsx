@@ -9,6 +9,7 @@ export default function SideNav() {
     { name: "useEffectHook", url: "/hookslearn/useEffectHook" },
     { name: "useReducerHook", url: "/hookslearn/useReducerHook" },
     { name: "useContext", url: "/hookslearn/useContext" },
+    { name: "useRef", url: "/hookslearn/useRef" },
   ];
   const pathname = usePathname();
   return (
