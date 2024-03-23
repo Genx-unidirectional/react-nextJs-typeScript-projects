@@ -1,4 +1,11 @@
+"use client";
+import ProductList from "@/app/ui/productCartUi/productList";
+
 const Page = () => {
-  return <div>Page</div>;
+  return (
+    <div className=" flex-grow justify-center items-center ">
+      <ProductList />
+    </div>
+  );
 };
 export default Page;
