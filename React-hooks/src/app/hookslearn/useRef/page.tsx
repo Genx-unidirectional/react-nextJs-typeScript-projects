@@ -2,9 +2,14 @@
 import { ReactElement } from "react";
 import StopWatch from "./stopWatch";
 import MessageDelay from "./messageDelay";
+import LatestMsgInput from "./latestMsgInput";
 
 const Page = () => {
-  const componentArr: ReactElement[] = [<StopWatch />, <MessageDelay />];
+  const componentArr: ReactElement[] = [
+    <StopWatch />,
+    <MessageDelay />,
+    <LatestMsgInput />,
+  ];
   return (
     <div className="min-h-screen w-full">
       {componentArr.map((component, idx) => {
