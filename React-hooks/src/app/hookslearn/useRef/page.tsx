@@ -3,12 +3,14 @@ import { ReactElement } from "react";
 import StopWatch from "./stopWatch";
 import MessageDelay from "./messageDelay";
 import LatestMsgInput from "./latestMsgInput";
+import ChatApp from "./chatStabalizer";
 
 const Page = () => {
   const componentArr: ReactElement[] = [
     <StopWatch />,
     <MessageDelay />,
     <LatestMsgInput />,
+    <ChatApp />,
   ];
   return (
     <div className="min-h-screen w-full">
