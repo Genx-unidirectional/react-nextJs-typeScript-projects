@@ -4,6 +4,8 @@ import StopWatch from "./stopWatch";
 import MessageDelay from "./messageDelay";
 import LatestMsgInput from "./latestMsgInput";
 import ChatApp from "./chatStabalizer";
+import CatFriends from "./multipleRefWithMap";
+import ForwardRefWithRef from "./forwardRefWithRef";
 
 const Page = () => {
   const componentArr: ReactElement[] = [
@@ -11,6 +13,7 @@ const Page = () => {
     <MessageDelay />,
     <LatestMsgInput />,
     <ChatApp />,
+    <ForwardRefWithRef />,
   ];
   return (
     <div className="min-h-screen w-full">
