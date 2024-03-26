@@ -14,6 +14,7 @@ const Page = () => {
     <LatestMsgInput />,
     <ChatApp />,
     <ForwardRefWithRef />,
+    <CatFriends />,
   ];
   return (
     <div className="min-h-screen w-full">
