@@ -3,7 +3,7 @@ import ProductList from "@/app/ui/productCartUi/productList";
 
 const Page = () => {
   return (
-    <div className=" flex-grow justify-center items-center ">
+    <div className=" h-full  ">
       <ProductList />
     </div>
   );
