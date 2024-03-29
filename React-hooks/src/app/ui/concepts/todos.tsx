@@ -12,7 +12,7 @@ export function createTodo(todo: string, completed: boolean = false): Todo {
 }
 
 export const initialTodo = [
-  createTodo("start", true),
-  createTodo("persist", true),
-  createTodo("exited", true),
+  createTodo("start", false),
+  createTodo("persist", false),
+  createTodo("excited", false),
 ];
