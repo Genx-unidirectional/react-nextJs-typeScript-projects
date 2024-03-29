@@ -15,4 +15,6 @@ export const initialTodo = [
   createTodo("start", false),
   createTodo("persist", false),
   createTodo("excited", false),
+  createTodo("strong", true),
+  createTodo("lean", true),
 ];

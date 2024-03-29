@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { createTodo } from "./todos";
-
-export default function TodoMaker() {
+import { Dispatch, SetStateAction } from "react";
+import { Todo } from "./todos";
+type Props = {
+  handleMaker: (newTodo: Todo) => void;
+};
+export default function TodoMaker({ handleMaker }: Props) {
   const [text, setText] = useState<string>("");
   const handleSubmit = () => {
     if (text.length < 2) return;
-    createTodo(text);
+    handleMaker(createTodo(text));
     setText("");
   };
   return (
@@ -18,7 +22,9 @@ export default function TodoMaker() {
         className="p-1 bg-white text-black  rounded-lg flex-grow"
         placeholder="write todo eg mini-goals"
       />
-      <button className="font-bold text-2xl">submit</button>
+      <button onClick={handleSubmit} className="font-bold text-2xl">
+        submit
+      </button>
     </div>
   );
 }
