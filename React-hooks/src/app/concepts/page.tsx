@@ -4,6 +4,7 @@ import ChatApp from "./chatApp";
 import ContactManager from "./contactWithEdit";
 import EmailCollapse from "./emailCollapse";
 import Todo from "./todo";
+import FormOrThanks from "./formWithCondition";
 
 const Page = () => {
   const componentArr = [
@@ -12,6 +13,7 @@ const Page = () => {
     <ImageLoad />,
     <EmailCollapse />,
     <Todo />,
+    <FormOrThanks />,
   ];
   return (
     <div className="min-h-screen">
