@@ -7,6 +7,7 @@ export default function FormOrThanks() {
     e.preventDefault();
     setShowForm(false);
   };
+
   return (
     <div className="w-3/4 h-3/5 bg-green-400 rounded-lg p-2 flex justify-center items-center">
       {showForm ? (
