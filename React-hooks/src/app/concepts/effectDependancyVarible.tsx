@@ -17,6 +17,7 @@ export default function EscapeEffectDependency({ roomId, theme }: Props) {
   useEffect(() => {
     sendInfo(roomId);
   }, [roomId]);
+
   //   useEffect(() => {
   //     logAnalytics(roomId, theme);
   //   }, [roomId, theme]); //let's say we don't want to trigger the effect because of the theme changes so what we gonna do is we going to use useEventEffect
