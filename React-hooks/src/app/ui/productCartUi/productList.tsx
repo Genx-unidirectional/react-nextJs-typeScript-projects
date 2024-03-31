@@ -12,6 +12,7 @@ const ProductList = () => {
       const inCart = cart.some((cartItem) => cartItem.sku === product.sku);
       return (
         <Product
+          key={product.sku}
           inCart={inCart}
           product={product}
           dispatch={dispatch}
