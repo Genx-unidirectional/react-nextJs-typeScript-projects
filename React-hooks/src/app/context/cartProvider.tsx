@@ -20,8 +20,9 @@ const REDUCER_ACTION_TYPE = {
   QUANTITY: "QUANTITY",
   SUBMIT: "SUBMIT",
 };
+export type Use_Reducer_Action_Type = typeof REDUCER_ACTION_TYPE;
 
-type ActionType = {
+export type ActionType = {
   type: string;
   payload?: CartItemType;
 };
@@ -109,7 +110,8 @@ const initCartContextState: CartContextState = {
   Reducer_Actions: REDUCER_ACTION_TYPE,
 };
 
-export const CartContext = createContext<CartContextState>(initCartContextState);
+export const CartContext =
+  createContext<CartContextState>(initCartContextState);
 
 export const CartProvider = ({
   children,
