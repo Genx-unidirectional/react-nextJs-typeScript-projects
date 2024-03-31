@@ -10,11 +10,18 @@ const ProductList = () => {
   if (products?.length) {
     pageContent = products.map((product) => {
       const inCart = cart.some((cartItem) => cartItem.sku === product.sku);
-      return <Product />;
+      return (
+        <Product
+          inCart={inCart}
+          product={product}
+          dispatch={dispatch}
+          Reducer_Actions={Reducer_Actions}
+        />
+      );
     });
   }
   return (
-    <main className="h-full p-1 text-black flex flex-col justify-center items-center ">
+    <main className="h-full p-1 text-black flex flex-col justify-center items-center">
       {pageContent}
     </main>
   );
