@@ -3,7 +3,7 @@ import ProductList from "@/app/ui/productCartUi/productList";
 
 const Page = () => {
   return (
-    <div className=" h-full  ">
+    <div className=" h-full ">
       <ProductList />
     </div>
   );
