@@ -18,6 +18,10 @@ const Nav = () => {
       name: "ProductCart",
       pathname: "/productCart",
     },
+    {
+      name: "describeUi",
+      pathname: "/describeui",
+    },
   ];
   return (
     <nav className="flex nav-width  p-2 items-center gap-2 overflow-x-scroll overflow-y-hidden overflow-hidden">
