@@ -1,28 +1,11 @@
 "use client";
-
+import { navLinks } from "@/config/paths";
 import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 const Nav = () => {
   const pathName = usePathname();
-  const navLinks = [
-    {
-      name: "Hooks",
-      pathname: "/hookslearn",
-    },
-    {
-      name: "Concepts",
-      pathname: "/concepts",
-    },
-    {
-      name: "ProductCart",
-      pathname: "/productCart",
-    },
-    {
-      name: "describeUi",
-      pathname: "/describeui",
-    },
-  ];
+
   return (
     <nav className="flex nav-width  p-2 items-center gap-2 overflow-x-scroll overflow-y-hidden overflow-hidden">
       {navLinks.map((link) => {
