@@ -22,7 +22,7 @@ type LinkData = {
 };
 export const describeUiLinks: LinkData[] = [
   {
-    name: "First",
+    name: "First Component",
     pathName: "#1",
   },
 ];
