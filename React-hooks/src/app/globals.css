@@ -98,20 +98,20 @@
     border-radius: none; /* Adjust the border radius of the scrollbar thumb */
   }
   .describe-nav-width::-webkit-scrollbar {
-    width: none; /* Adjust the width of the scrollbar */
-    height: none; /* Adjust the height of the scrollbar */
+    width: 0.5rem; /* Adjust the width of the scrollbar */
+    height: 100%; /* Adjust the height of the scrollbar */
   }
   
   .describe-nav-width::-webkit-scrollbar-thumb {
-    background-color: none; /* Change the color of the scrollbar thumb */
-    border-radius: none; /* Adjust the border radius of the scrollbar thumb */
+    background-color: white; /* Change the color of the scrollbar thumb */
+    border-radius: 05rem; /* Adjust the border radius of the scrollbar thumb */
   }
   .describe-nav-width{
-    scrollbar-width: none; /* Set the width of the scrollbar */
+    scrollbar-width: 4px; /* Set the width of the scrollbar */
   }
   
   .describe-nav-width::-moz-scrollbar-thumb {
-    background-color: none; /* Change the color of the scrollbar thumb */
+    background-color:4px ; /* Change the color of the scrollbar thumb */
     border-radius: none; /* Adjust the border radius of the scrollbar thumb */
   }
 }

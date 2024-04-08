@@ -1,3 +1,3 @@
 export default function Page() {
-  return <main>Hooks</main>;
+  return <main className="p-2"></main>;
 }

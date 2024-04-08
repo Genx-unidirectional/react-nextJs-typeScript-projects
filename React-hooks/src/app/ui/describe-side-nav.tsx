@@ -16,7 +16,7 @@ function SideNavDescribe() {
       navLinks.find((item) => item.pathname === currentPathName)?.name
   )?.component;
   return (
-    <div className="h-full overflow-hidden flex items-center flex-col justify-center text-white overflow-y-scroll describe-nav-width scrollbar-thin">
+    <div className="h-full py-2 overflow-hidden w-full flex items-center flex-col justify-center text-white overflow-y-scroll describe-nav-width scrollbar-thin">
       {component}
     </div>
   );

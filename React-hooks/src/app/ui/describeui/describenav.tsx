@@ -1,4 +1,33 @@
+import { describeUiLinks } from "@/config/paths";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 function DescribeNav() {
-  return <div>DescribeNav</div>;
+  const getPath = usePathname();
+  console.log(getPath);
+  return (
+    <div className="w-full  h-full">
+      <h2 className="font-bold text-center text-xl bg-gradient-to-b text-transparent from-gray-50 mb-4 to-gray-400 bg-clip-text">
+        Describing Ui
+      </h2>
+      <ul className="list-none flex p-2 flex-col w-full">
+        {describeUiLinks.map((item) => (
+          <li
+            key={item.pathName}
+            className="text-white w-full rounded-md hover:bg-slate-700 pl-2 py-1"
+          >
+            <Link
+              className={cn(
+                "text-gray-400 text-xl first first-letter:uppercase"
+              )}
+              href={item.pathName}
+            >
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 export default DescribeNav;

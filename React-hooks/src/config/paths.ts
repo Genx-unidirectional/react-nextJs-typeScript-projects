@@ -16,3 +16,13 @@ export const navLinks = [
     pathname: "/describeui",
   },
 ];
+type LinkData = {
+  name: string;
+  pathName: string;
+};
+export const describeUiLinks: LinkData[] = [
+  {
+    name: "First",
+    pathName: "#1",
+  },
+];
