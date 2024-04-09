@@ -8,7 +8,9 @@ function InteractNav() {
   //   console.log(getPath);
   return (
     <div className="w-full  h-full">
-      <h2 className="font-bold text-center text-xl bg-gradient-to-b text-transparent from-gray-50 mb-4 to-gray-400 bg-clip-text"></h2>
+      <h2 className="font-bold text-center text-xl bg-gradient-to-b text-transparent from-gray-50 mb-4 to-gray-400 bg-clip-text">
+        Interactivity
+      </h2>
       <ul className="list-none flex p-2 flex-col w-full">
         {interactivityLinks.map((item) => (
           <li

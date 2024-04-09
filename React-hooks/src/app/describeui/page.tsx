@@ -13,7 +13,7 @@ function page() {
       {componentArr.map((component) => (
         <div
           id={component.id.toString()}
-          className=" min-h-full w-full flex items-center justify-center"
+          className=" h-full w-full flex items-center justify-center"
           key={component.id}
         >
           {component.item}

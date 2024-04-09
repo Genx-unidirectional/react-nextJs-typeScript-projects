@@ -1,11 +1,21 @@
 "use client";
 
 import BasicForm from "./basicForm";
+import SnapShot from "./snapShot";
+import TogglerInfo from "./togglerInfo";
 
 const componentArr: { id: number; item: React.ReactElement }[] = [
   {
     id: 1,
     item: <BasicForm />,
+  },
+  {
+    id: 2,
+    item: <TogglerInfo />,
+  },
+  {
+    id: 3,
+    item: <SnapShot />,
   },
 ];
 function page() {

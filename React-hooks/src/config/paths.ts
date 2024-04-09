@@ -36,4 +36,12 @@ export const interactivityLinks: LinkData[] = [
     name: "Basic Form",
     pathName: "#1",
   },
+  {
+    name: "Toggle Info",
+    pathName: "#2",
+  },
+  {
+    name: "SnapShot State",
+    pathName: "#3",
+  },
 ];
