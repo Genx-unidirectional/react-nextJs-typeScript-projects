@@ -1,11 +1,16 @@
 "use client";
 import Accordion from "./accordion";
+import SameInput from "./sameInput";
 
 function Page() {
   const componentArr = [
     {
       id: 1,
       component: <Accordion />,
+    },
+    {
+      id: 1,
+      component: <SameInput/>,
     },
   ];
   return (

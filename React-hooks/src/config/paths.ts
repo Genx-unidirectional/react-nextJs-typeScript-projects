@@ -63,4 +63,8 @@ export const manageNavLinks: LinkData[] = [
     name: "Accordion",
     pathName: "#1",
   },
+  {
+    name: "Same Input",
+    pathName: "#2",
+  },
 ];
