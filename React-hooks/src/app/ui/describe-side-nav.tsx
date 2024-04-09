@@ -2,12 +2,17 @@
 import { navLinks } from "@/config/paths";
 import { usePathname } from "next/navigation";
 import DescribeNav from "./describeui/describenav";
+import InteractNav from "./interactivity/interactNav";
 function SideNavDescribe() {
   const currentPathName = usePathname();
   const navArr = [
     {
-      name: "describeUi",
+      name: "DescribeUi",
       component: <DescribeNav />,
+    },
+    {
+      name: "Interactivity",
+      component: <InteractNav />,
     },
   ];
   const component = navArr.find(

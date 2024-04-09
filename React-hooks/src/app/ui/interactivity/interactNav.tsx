@@ -1,18 +1,16 @@
-import { describeUiLinks } from "@/config/paths";
+import { interactivityLinks } from "@/config/paths";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-function DescribeNav() {
+function InteractNav() {
   const getPath = usePathname();
-  console.log(getPath);
+  //   console.log(getPath);
   return (
     <div className="w-full  h-full">
-      <h2 className="font-bold text-center text-xl bg-gradient-to-b text-transparent from-gray-50 mb-4 to-gray-400 bg-clip-text">
-        Describing Ui
-      </h2>
+      <h2 className="font-bold text-center text-xl bg-gradient-to-b text-transparent from-gray-50 mb-4 to-gray-400 bg-clip-text"></h2>
       <ul className="list-none flex p-2 flex-col w-full">
-        {describeUiLinks.map((item) => (
+        {interactivityLinks.map((item) => (
           <li
             key={item.pathName}
             className="text-white w-full flex justify-between items-center rounded-md hover:bg-slate-700 pl-2 py-1"
@@ -32,4 +30,4 @@ function DescribeNav() {
     </div>
   );
 }
-export default DescribeNav;
+export default InteractNav;

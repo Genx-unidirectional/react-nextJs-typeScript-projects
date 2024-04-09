@@ -12,8 +12,12 @@ export const navLinks = [
     pathname: "/productCart",
   },
   {
-    name: "describeUi",
+    name: "DescribeUi",
     pathname: "/describeui",
+  },
+  {
+    name: "Interactivity",
+    pathname: "/interactivity",
   },
 ];
 type LinkData = {
@@ -23,6 +27,13 @@ type LinkData = {
 export const describeUiLinks: LinkData[] = [
   {
     name: "First Component",
+    pathName: "#1",
+  },
+];
+
+export const interactivityLinks: LinkData[] = [
+  {
+    name: "Basic Form",
     pathName: "#1",
   },
 ];

@@ -1,11 +1,12 @@
 "use client";
 
-import FirstComponent from "./firstComponent";
-import PureJsx from "./pureJsx";
+import BasicForm from "./basicForm";
 
 const componentArr: { id: number; item: React.ReactElement }[] = [
-  { id: 1, item: <FirstComponent /> },
-  // { id: 2, item: <PureJsx /> },
+  {
+    id: 1,
+    item: <BasicForm />,
+  },
 ];
 function page() {
   return (
