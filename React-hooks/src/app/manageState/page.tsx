@@ -1,5 +1,6 @@
 "use client";
 import Accordion from "./accordion";
+import FilterComponent from "./filterComponent";
 import SameInput from "./sameInput";
 
 function Page() {
@@ -9,8 +10,12 @@ function Page() {
       component: <Accordion />,
     },
     {
-      id: 1,
-      component: <SameInput/>,
+      id: 2,
+      component: <SameInput />,
+    },
+    {
+      id: 3,
+      component: <FilterComponent />,
     },
   ];
   return (
