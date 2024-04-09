@@ -1,6 +1,7 @@
 "use client";
 
 import BasicForm from "./basicForm";
+import ObjectUpdate from "./objectUpdate";
 import PendingBuy from "./pendingBuy";
 import SnapShot from "./snapShot";
 import TogglerInfo from "./togglerInfo";
@@ -18,6 +19,10 @@ const componentArr: { id: number; item: React.ReactElement }[] = [
     id: 3,
     item: <SnapShot />,
   },
+  {
+    id: 5,
+    item: <ObjectUpdate />,
+  },
 ];
 function page() {
   return (
@@ -25,7 +30,7 @@ function page() {
       {componentArr.map((component) => (
         <div
           id={component.id.toString()}
-          className=" min-h-full w-full flex items-center justify-center"
+          className=" min-h-screen w-full flex items-center justify-center"
           key={component.id}
         >
           {component.item}

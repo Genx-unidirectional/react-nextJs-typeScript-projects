@@ -48,4 +48,8 @@ export const interactivityLinks: LinkData[] = [
     name: "Pending Buy",
     pathName: "#4",
   },
+  {
+    name: "Object Update",
+    pathName: "#5",
+  },
 ];
