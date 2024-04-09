@@ -1,12 +1,12 @@
 export const navLinks = [
-  {
-    name: "Hooks",
-    pathname: "/hookslearn",
-  },
-  {
-    name: "Concepts",
-    pathname: "/concepts",
-  },
+  // {
+  //   name: "Hooks",
+  //   pathname: "/hookslearn",
+  // },
+  // {
+  //   name: "Concepts",
+  //   pathname: "/concepts",
+  // },
   {
     name: "ProductCart",
     pathname: "/productCart",
@@ -18,6 +18,10 @@ export const navLinks = [
   {
     name: "Interactivity",
     pathname: "/interactivity",
+  },
+  {
+    name: "State Manage",
+    pathname: "/manageState",
   },
 ];
 type LinkData = {
@@ -51,5 +55,12 @@ export const interactivityLinks: LinkData[] = [
   {
     name: "Object Update",
     pathName: "#5",
+  },
+];
+
+export const manageNavLinks: LinkData[] = [
+  {
+    name: "Accordion",
+    pathName: "#1",
   },
 ];
