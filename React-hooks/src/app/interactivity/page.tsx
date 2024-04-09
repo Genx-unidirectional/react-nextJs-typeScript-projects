@@ -1,6 +1,7 @@
 "use client";
 
 import BasicForm from "./basicForm";
+import PendingBuy from "./pendingBuy";
 import SnapShot from "./snapShot";
 import TogglerInfo from "./togglerInfo";
 

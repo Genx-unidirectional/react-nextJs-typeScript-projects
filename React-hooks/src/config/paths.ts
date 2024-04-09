@@ -44,4 +44,8 @@ export const interactivityLinks: LinkData[] = [
     name: "SnapShot State",
     pathName: "#3",
   },
+  {
+    name: "Pending Buy",
+    pathName: "#4",
+  },
 ];
