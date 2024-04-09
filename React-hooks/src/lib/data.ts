@@ -129,3 +129,11 @@ export const foods = [
       "Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch",
   },
 ];
+
+export const contacts = [
+  { id: 0, name: "Taylor", email: "taylor@mail.com" },
+  { id: 1, name: "Alice", email: "alice@mail.com" },
+  { id: 2, name: "Bob", email: "bob@mail.com" },
+];
+
+export type Contact = (typeof contacts)[number];

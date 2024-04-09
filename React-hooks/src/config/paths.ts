@@ -67,4 +67,12 @@ export const manageNavLinks: LinkData[] = [
     name: "Same Input",
     pathName: "#2",
   },
+  {
+    name: "Filter Food",
+    pathName: "#3",
+  },
+  {
+    name: "State Preserve",
+    pathName: "#4",
+  },
 ];

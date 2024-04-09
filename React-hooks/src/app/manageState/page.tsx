@@ -2,6 +2,7 @@
 import Accordion from "./accordion";
 import FilterComponent from "./filterComponent";
 import SameInput from "./sameInput";
+import StatePreserve from "./statePreserve";
 
 function Page() {
   const componentArr = [
@@ -16,6 +17,10 @@ function Page() {
     {
       id: 3,
       component: <FilterComponent />,
+    },
+    {
+      id: 4,
+      component: <StatePreserve />,
     },
   ];
   return (
