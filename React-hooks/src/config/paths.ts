@@ -7,10 +7,10 @@ export const navLinks = [
   //   name: "Concepts",
   //   pathname: "/concepts",
   // },
-  {
-    name: "ProductCart",
-    pathname: "/productCart",
-  },
+  // {
+  //   name: "ProductCart",
+  //   pathname: "/productCart",
+  // },
   {
     name: "DescribeUi",
     pathname: "/describeui",
@@ -22,6 +22,10 @@ export const navLinks = [
   {
     name: "State Manage",
     pathname: "/manageState",
+  },
+  {
+    name: "Escape Hatch",
+    pathname: "/escapeHatch",
   },
 ];
 type LinkData = {
@@ -74,5 +78,12 @@ export const manageNavLinks: LinkData[] = [
   {
     name: "State Preserve",
     pathName: "#4",
+  },
+];
+
+export const escapeHatchLinks: LinkData[] = [
+  {
+    name: "Stop Watch",
+    pathName: "#1",
   },
 ];
