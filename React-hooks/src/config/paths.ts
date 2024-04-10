@@ -90,4 +90,16 @@ export const escapeHatchLinks: LinkData[] = [
     name: "Msg Undo",
     pathName: "#2",
   },
+  {
+    name: "Debounce",
+    pathName: "#3",
+  },
+  {
+    name: "Scroll to view",
+    pathName: "#4",
+  },
+  {
+    name: "Scroll to horizon",
+    pathName: "#5",
+  },
 ];

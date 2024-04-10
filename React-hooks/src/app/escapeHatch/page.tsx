@@ -3,6 +3,9 @@
 import { Component } from "lucide-react";
 import StopWatch from "./stopWatch";
 import MsgUndo from "./msgUndo";
+import Dashboard from "./debounce";
+import CatFriends from "./scroller";
+import CatFriends2 from "./scrollHorizon";
 
 function Page() {
   const componentArr = [
@@ -13,6 +16,18 @@ function Page() {
     {
       id: 2,
       component: <MsgUndo />,
+    },
+    {
+      id: 3,
+      component: <Dashboard />,
+    },
+    {
+      id: 4,
+      component: <CatFriends />,
+    },
+    {
+      id: 5,
+      component: <CatFriends2 />,
     },
   ];
   return (
