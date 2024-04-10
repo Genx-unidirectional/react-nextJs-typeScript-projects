@@ -86,4 +86,8 @@ export const escapeHatchLinks: LinkData[] = [
     name: "Stop Watch",
     pathName: "#1",
   },
+  {
+    name: "Msg Undo",
+    pathName: "#2",
+  },
 ];

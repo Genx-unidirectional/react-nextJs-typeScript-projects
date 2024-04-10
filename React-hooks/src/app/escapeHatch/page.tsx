@@ -2,12 +2,17 @@
 
 import { Component } from "lucide-react";
 import StopWatch from "./stopWatch";
+import MsgUndo from "./msgUndo";
 
 function Page() {
   const componentArr = [
     {
       id: 1,
       component: <StopWatch />,
+    },
+    {
+      id: 2,
+      component: <MsgUndo />,
     },
   ];
   return (
