@@ -1,20 +1,39 @@
 import { useRef, useEffect, useImperativeHandle, forwardRef } from "react";
 
-export default function App() {
-  const cntEl: any = useRef(null); // I don't know what type should be here.
-  useEffect(() => {
-    if (cntEl.current) {
-      cntEl.current.start();
-    }
-  }, []);
-  return <Countdown ref={cntEl} />;
-}
-
-const Countdown = forwardRef((props, ref) => {
+export const Countdown = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     start() {
       alert("start");
     },
   }));
-  return <div>Countdown</div>;
+  return <div>My parent control me</div>;
+});
+
+type Props = {};
+export type MyInputMethods = {
+  focus: () => void;
+  scrollIntoView: () => void;
+};
+
+//Let's limit upcoming ref
+
+export const MyInput = forwardRef<MyInputMethods, Props>((props, ref) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  useImperativeHandle(ref, () => {
+    return {
+      focus() {
+        inputRef.current?.focus();
+      },
+      scrollIntoView() {
+        inputRef.current?.scrollIntoView();
+      },
+    };
+  });
+  return (
+    <input
+      className="bg-white text-black p-1 rounded-lg w-1/2"
+      type="text"
+      ref={inputRef}
+    />
+  );
 });

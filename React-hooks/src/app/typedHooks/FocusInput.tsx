@@ -6,7 +6,7 @@ import { forwardRef, useImperativeHandle } from "react";
 
 // we can use useImperative handle to limit the what functionality exposed to the parent component by child whose dom nodes are exposed
 
-type CountHandle = {
+export type CountHandle = {
   start: () => void;
 };
 

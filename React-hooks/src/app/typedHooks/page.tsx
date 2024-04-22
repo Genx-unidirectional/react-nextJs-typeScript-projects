@@ -1,10 +1,11 @@
 "use client";
-import App from "./ForwardRef";
+
+import RefWithType from "./RefWithType";
 
 function page() {
   return (
     <div className="bg-white text-black min-h-screen w-full flex flex-col justify-center items-center">
-      <App />
+      <RefWithType />
     </div>
   );
 }
